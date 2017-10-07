@@ -4,7 +4,7 @@
     <div class="panel panel-default">
         <div class="panel-heading"><i class="fa fa-plus fa-lg"></i> Add Product</div>
         <div class="panel-body">
-            <form action="{{ url('/product/' .$product->id)  }}"  method="post" class="form-horizontal">
+            <form action="{{ url('/product/' .$product->id)  }}"  method="post" class="form-horizontal" enctype="multipart/form-data">
                 {{ csrf_field()  }}
                 {{ method_field('PUT')  }}
                 <div class="form-group">
@@ -26,6 +26,12 @@
                             <input type="number" name="weight" class="form-control" value="{{ $product->weight  }}" required>
                             <span class="input-group-addon" id="basic-addon1">Kg</span>
                         </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="price" class="control-label col-md-2">Image</label>
+                    <div class="col-md-9">
+                        <input type="file" name="image" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-group">

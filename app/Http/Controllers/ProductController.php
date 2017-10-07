@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -49,6 +50,13 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->weight = $request->weight;
         $product->description = $request->description;
+        if ($request->hasFile('image')) {
+            \File::delete(public_path('product-images/' . $product->image));
+            $image = $request->file('image');
+            $name = $image->getClientOriginalName();
+            $image->move(public_path('product-images'), $name);
+            $product->image = $name;
+        }
         $product->save();
         return redirect('/product');
     }
