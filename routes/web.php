@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//Route::group(['prefix' => 'product'], function($router) {
+//    $router->get('/', 'ProductController@index');
+//    $router->get('/create', 'ProductController@create');
+//    $router->post('/', 'ProductController@store');
+//    $router->get('/{id}/edit', 'ProductController@edit');
+//});
+
+Route::resource('product', 'ProductController');
