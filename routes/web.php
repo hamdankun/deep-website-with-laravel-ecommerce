@@ -26,3 +26,6 @@ Route::get('/', function () {
 Route::resource('product', 'ProductController');
 
 Route::get('/product-list', 'FrontendController@index');
+Route::get('/product-list/{id}', 'FrontendController@show');
+Route::get('/product-list/add-cart/{id}', 'FrontendController@addCart');
+

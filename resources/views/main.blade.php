@@ -10,6 +10,12 @@
 <body>
     @include('navbar')
     <div class="container-fluid mt-70">
+        @if(session()->has('cart_notification'))
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Notification!</strong> {{ session()->get('cart_notification')  }}
+            </div>
+        @endif
         @yield('content')
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>

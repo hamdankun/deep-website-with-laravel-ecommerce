@@ -14,10 +14,12 @@
                             {{ str_limit($value->description, 100)  }}
                         </p>
                         <p>
-                            <a href="#" class="btn btn-primary" role="button">
+                            <a href="{{ asset('/product-list/add-cart/' . $value->id)  }}" class="btn btn-primary" role="button">
                                 <i class="fa fa-shopping-cart"></i> Add Cart
                             </a>
-                            <a href="#" class="btn btn-default" role="button">
+                            <a href="{{ url('/product-list/' . $value->id) }}"
+                               class="btn btn-default"
+                               role="button">
                                 <i class="fa fa-eye"></i> View Detail
                             </a>
                         </p>
