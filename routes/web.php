@@ -15,17 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-//Route::group(['prefix' => 'product'], function($router) {
-//    $router->get('/', 'ProductController@index');
-//    $router->get('/create', 'ProductController@create');
-//    $router->post('/', 'ProductController@store');
-//    $router->get('/{id}/edit', 'ProductController@edit');
-//});
-
 Route::resource('product', 'ProductController');
 
 Route::get('/product-list', 'FrontendController@index');
 Route::get('/product-list/{id}', 'FrontendController@show');
 Route::get('/product-list/add-cart/{id}', 'FrontendController@addCart');
+Route::any('/product-list/add-cart-with-qty/{id}', 'FrontendController@addCart');
 
