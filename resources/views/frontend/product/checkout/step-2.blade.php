@@ -40,7 +40,10 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-12 text-right">
-                                <button type="submit" class="btn btn-primary">Next <i class="fa fa-arrow-right"></i></button>
+                                <button
+                                        type="submit"
+                                        class="btn btn-primary">Next
+                                    <i class="fa fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </form>

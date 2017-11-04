@@ -22,8 +22,10 @@ Route::get('/product-list/{id}', 'FrontendController@show');
 Route::get('/product-list/add-cart/{id}', 'FrontendController@addCart');
 Route::post('/product-list/add-cart-with-qty/{id}', 'FrontendController@addCart');
 Route::get('/shopping-cart', 'FrontendController@shoppingCart');
+// new route
 Route::get('/step-1', 'FrontendController@stepOne');
 Route::get('/step-2', 'FrontendController@stepTwo');
 Route::post('/step-2', 'FrontendController@postStepTwo');
+Route::get('/step-3', 'FrontendController@stepThree');
 
 
