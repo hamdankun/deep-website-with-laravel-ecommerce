@@ -18,7 +18,7 @@
                 <li><a href="{{ url('/product-list')  }}">Product List <span class="sr-only">(current)</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> <span class="badge">{{ Cart::content()->groupBy('id')->count()  }}</span></a></li>
+                <li><a href="{{ url('/shopping-cart')  }}"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> <span class="badge">{{ Cart::content()->groupBy('id')->count()  }}</span></a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Page <span class="caret"></span></a>
                     <ul class="dropdown-menu">

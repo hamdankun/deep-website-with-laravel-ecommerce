@@ -18,21 +18,21 @@
                     <p>
                         {{ $product->description  }}
                     </p>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <form action="{{ url('/product-list/add-cart-with-qty/' . $product->id) }}" method="POST">
-                                {{ csrf_field()  }}
-                                <div class="input-group">
-                                    <input type="number" name="qty" value="1"  class="form-control" placeholder="Qty">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" >
-                                            <i class="fa fa-shopping-cart"></i> Add To Cart
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+<div class="row">
+<div class="col-md-3">
+    <form action="{{ url('/product-list/add-cart-with-qty/' . $product->id) }}" method="POST">
+        {{ csrf_field()  }}
+        <div class="input-group">
+            <input type="number" name="qty" value="1"  class="form-control" placeholder="Qty">
+            <span class="input-group-btn">
+                <button class="btn btn-default" >
+                    <i class="fa fa-shopping-cart"></i> Add To Cart
+                </button>
+            </span>
+        </div>
+    </form>
+</div>
+</div>
                 </div>
             </div>
         </div>
